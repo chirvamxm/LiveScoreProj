@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TimeZoneChanging suit">
+
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+        <listener class-name="listeners.RetryTestListener"/>
+    </listeners>
+
+    <test name="Login tests">
+        <parameter name="browser" value="firefox"/>
+        <groups>
+            <run>
+                <exclude name="broken"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.TimeZoneChangingTest"/>
+        </classes>
+    </test>
+
+</suite>
